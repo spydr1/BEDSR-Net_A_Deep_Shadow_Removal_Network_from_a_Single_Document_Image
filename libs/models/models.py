@@ -117,7 +117,7 @@ class CvTi(nn.Module):
         padding: int = 1,
         dilation: int = 1,
         groups: int = 1,
-        bias: bool = False,
+        bias: bool = True,
     ) -> None:
         super(CvTi, self).__init__()
         self.after: Any[Callable]
