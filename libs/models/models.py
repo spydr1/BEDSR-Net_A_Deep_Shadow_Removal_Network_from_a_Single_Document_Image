@@ -123,7 +123,7 @@ class CvTi(nn.Module):
         self.after: Any[Callable]
         self.before: Any[Callable]
         self.conv = nn.ConvTranspose2d(
-            in_channels, out_channels, kernel_size, stride, padding, bias
+            in_channels, out_channels, kernel_size, stride= stride, padding=padding, bias=bias
         )
         self.conv.apply(weights_init("gaussian"))
         if after == "BN":
